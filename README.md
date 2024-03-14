@@ -20,3 +20,6 @@
 
 - In the application, the Strategy Pattern is used for the offers of the customers. Each customer has a membership that can be any one of the following types: Regular, Gold, or Platinum, having the greater discounts and perks than the previous, respectively. The interface can be seen in `OfferCalculationStrategy` while its implementing subclasses (the different strategies) can be seen in the files `RegularOfferCalculationStrategy`, `GoldOfferCalculationStrategy`, and `PlatinumOfferCalculationStrategy`. Each type has a price differentiator, which is then mapped to the actual price of the room per night. Furthermore, a more "complex" computation is done for Platinum members. They get a free night when they will stay for 5 days, and another free night if they will stay for 10 days.
 - Essentially, the Strategy Pattern is just an elaborate and controlled abstraction. As seen in this example, the code is focused more on the subclasses than having an already implemented procedure in the superclass. By having a controlled superclass `OfferCalculationStrategy`, future subclasses (e.g., `DiamondOfferCalculationStrategy`) can be formed while being easily guided and extended.
+
+# Resilience exercise
+see Reflection.pdf
