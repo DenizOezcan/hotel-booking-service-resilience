@@ -76,6 +76,7 @@ public class GatewayRoomService {
         return gsonParser.fromJson(response.body(), RoomDto.class);
     }
 
+    @CircuitBreaker(name = SINGLE_ROOM_RESILIENCE_KEY)
     @Retry(name = SINGLE_ROOM_RESILIENCE_KEY)
     @Bulkhead(name = SINGLE_ROOM_RESILIENCE_KEY)
     public BookingResponseDto bookRoom(Long id, BookingRequestDto bookingRequest) throws Throwable {
